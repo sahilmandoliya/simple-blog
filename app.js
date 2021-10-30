@@ -25,6 +25,7 @@ app.use('/', (req, res, next) => {
   res.locals.year = new Date().getFullYear()
   next()
 })
+
 // Home
 app.get('/', (req, res) => {
   Cosmic.getObjects(config, (err, response) => {
@@ -41,6 +42,7 @@ app.get('/', (req, res) => {
     res.render('index.html', { partials })
   })
 })
+
 // Single Post
 app.get('/:slug', (req, res) => {
   async.series([
@@ -62,6 +64,7 @@ app.get('/:slug', (req, res) => {
     }
   ])
 })
+
 // Author Posts
 app.get('/author/:slug', (req, res) => {
   Cosmic.getObjects(config, (err, response) => {
@@ -85,6 +88,7 @@ app.get('/author/:slug', (req, res) => {
     res.render('author.html', { partials })
   })
 })
+
 http.listen(app.get('port'), () => {
-  console.info('==> 🌎  Go to http://localhost:%s', app.get('port'));
+  console.info('==> 🌎  Open in Browser http://localhost:%s', app.get('port'));
 })
