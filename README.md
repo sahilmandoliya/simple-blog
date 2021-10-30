@@ -18,7 +18,7 @@ COSMIC_BUCKET=your-bucket-slug COSMIC_READ_KEY=your-bucket-read-key yarn run dev
 ```
 COSMIC_BUCKET=your-bucket-slug COSMIC_READ_KEY=your-bucket-read-key yarn start
 ```
-Open [http://localhost:3000](http://localhost:3000).
+Open in browser [http://localhost:3000](http://localhost:3000).
 
 ### Node.js + Cosmic JS
 You can easily manage the content in your Simple Blog website on Cosmic JS.  Follow these steps:
